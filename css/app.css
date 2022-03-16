@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%; 
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    font-size: 16px; 
+    font-size: 1.6rem; 
+    font-family: 'Noto Sans SC', sans-serif;
+    color: rgba(255, 255, 255, 1);
+    background-color: #10101a;
+    width: 100%;
+    overflow: auto;
+    text-decoration: none;
+    margin-top: 84px;
+}
+
+
+
+.d-none {
+    display: none;
+}
+
+.load-more{
+    
+    margin: 20px 10%;
+    padding: 4px 10px;
+    border: 1px solid rgb(80, 80, 80);
+    text-align: center;
+    border-radius: 4px;
+    font-size: 12px;
+    color: rgb(80, 80, 80);
+    cursor: pointer;
+
+}
+
+.no-more {
+    border: none;
+}
+
+/*  */
+
+/* loading spinner */
+
+.loader {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 60px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.half-circle-spinner, .half-circle-spinner * {
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .half-circle-spinner {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    position: relative;
+  }
+
+  .half-circle-spinner .circle {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: calc(30px / 10) solid transparent;
+  }
+
+  .half-circle-spinner .circle.circle-1 {
+    border-top-color: #FE6E9A;
+    animation: half-circle-spinner-animation 1s infinite;
+  }
+
+  .half-circle-spinner .circle.circle-2 {
+    border-bottom-color: #FE6E9A;
+    animation: half-circle-spinner-animation 1s infinite alternate;
+  }
+
+  @keyframes half-circle-spinner-animation {
+    0% {
+      transform: rotate(0deg);
+
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+
+/* loading spinner */
+
+
+h1 {
+    font-size: 24px; 
+    font-size: 2.4rem; 
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 37.5rem !important;
+    margin: 0 auto;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 0.8rem;
+}
+
+/* Header */
+
+header {
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 64px;
+  margin-bottom: 20px;
+ 
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 2rem;
+    font-family: 'Fredoka One', sans-serif; 
+    background-color: #1F1F2B;
+    position: fixed;
+    width: 100%;
+    z-index: 100;;
+    /* top: -10px; */
+}
+
+header .logo {
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 1.2rem;
+color: #FE6E9A;
+}
+
+.logo h1 {
+    font-size: 2.4rem;
+}
+
+.logo img {
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.nav img {
+    width: 3.6rem;
+    width: 3.6rem; 
+}
+
+/* main sections */
+
+
+
+
+/* now showing 近期热映 */
+.now-showing {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.now-showing__title {
+    /* font-family: 'Fredoka One', sans-serif;  */
+    color: rgba(255, 255, 255, 0.6)
+}
+
+/* single card */
+.now-showing_card {
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content:flex-start;
+    gap:1.6rem;
+    background: url('/Movie_Pie/images/card-bg.svg') no-repeat;
+    width: 33.5rem;
+    /* width: min(33.5rem); */
+    height: 18.7rem;
+    background-size: cover;
+    padding: 16px;
+    transition: .1s ease-in-out;
+    transition-property: all;
+}
+
+    .now-showing_card:hover {
+        transform: translateY(-4px);
+        cursor: pointer;
+    }
+
+
+    .now-showing_poster {
+    position:relative;
+    border-radius: 1rem;
+    min-width: 11rem;
+    object-fit: cover;
+    overflow: hidden;
+
+    }
+
+    .now-showing_poster img{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* height: 100%; */
+        transition: 1s ease;
+        
+    }
+
+
+    .card__details {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        padding: 10px 0;
+    }
+
+    .card__details-rate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:left;
+    gap: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    }
+
+    .card__details-rate img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .card__details-rate p { 
+        font-family: 'Fredoka One', sans-serif; 
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        color: #FDC83F;
+
+    }
+    /* 上映时间 */
+    .card__top span {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.6);
+        display: block;
+    }
+
+    .card__details-bottom {
+        line-height: 0;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        /* gap: 4px; */
+        /* height: 24px; */
+        /* overflow: hidden; */
+    }
+
+    .card__details-bottom .movie-tag {
+        display: inline-block;
+        padding: 4px 10px 5px;
+        margin: 0;
+        background: rgba(255, 255, 255, 0.05);
+        font-size: 0.8rem;
+        border-radius: 10em;
+        font-size: 1rem;
+        /* letter-spacing: 2px; */
+        line-height: 1rem;
+        text-align: center;
+        margin-right: 6px;
+        color:rgba(255, 255, 255, 0.6);
+        border: 0;
+
+    }
+
+    .card__details-bottom .tag-important {
+        background-color: #FE6E9A;
+        padding: 4px 10px 5px;
+    }
+
+/* Tabbar 底部导航栏  */
+.tabbar {
+    position: fixed;
+    min-width: 100%;
+    width: 100%;
+    height: 68px;
+    bottom: 0;
+    background: rgba(49, 49, 61, 0.9);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tabbar__col {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    row-gap: 2px;
+}
+.tabbar__col img {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.tabbar__col span {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.tabbar__not-active {
+    opacity: 0.6;
+    transform: scale(0.9)
+}
+
+@media screen and (min-width: 720px) {
+    html {
+        font-size: 100%; 
+    }
+    .container {
+        max-width: 720px;
+    }
+    .card__details {
+        padding: 24px 0;
+    }
+    body {
+        margin-top: 108px;
+    }
+}

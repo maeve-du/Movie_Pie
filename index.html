@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 轮播图swiper插件样式 -->
+    <!-- 3.x -->
+    <!-- <link rel="stylesheet" href="./css/swiper.min.css"> -->
+    <!-- 7.x -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <!-- swiper自定义样式 -->
+    <link rel="stylesheet" href="./css/swiper-extra.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <title>Movie Pie</title>
+</head>
+
+<body>
+    <header class="">
+        <nav>
+            <div class="logo">
+                <img src="./images/play.png" alt="" class="logo-img">
+                <h1 class="logo-text">Movie Pie</h1>
+            </div>
+            <div class="nav">
+                <img src="./images/user-avatar-default.svg" alt="">
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-3.jpg" alt=""></div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <section class="now-showing">
+            <div class="now-showing__title">
+                <h2 class="now-showing__title">近期热映</h2>
+                <!-- <button class="tempBtn">Refresh</button> -->
+                <div class="divider"></div>
+            </div>
+
+            <div class="movie-list__now-showing">
+                <!-- 1 -->
+                <!-- <div class="now-showing_card">
+                    <div class="now-showing_poster"><img src="./images//poster-spiderman.jpg"></div>
+                    <div class="card__details">
+                        <div class="card__top">
+                            <h2>蜘蛛侠: 英雄无归</h2>
+                            <div class="card__details-rate">
+                                <img src="./images/star.svg" alt="">
+                                <p>8.8</p>
+                            </div>
+                            <span>上映时间: 2020年3月2日</span>
+                        </div>
+                        <div class="card__details-bottom">
+                            <div>
+                                <span class="movie-tag tag-important">3D</span>
+                            </div>
+                            <div class="movie-tag-group">
+                                <span class="movie-tag">剧情</span>
+                                <span class="movie-tag">历史</span>
+                                <span class="movie-tag">战争</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="load-more d-none">加载更多</div>
+            <div class="load-more no-more d-none">已经到底了哦...</div>
+            <div class="loader d-none">
+                <div class="half-circle-spinner">
+                    <div class="circle circle-1"></div>
+                    <div class="circle circle-2"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer class="container tabbar">
+        <div class="tabbar__col">
+            <img src="./images/home.svg" alt="">
+            <span>首页</span>
+        </div>
+        <div class="tabbar__col tabbar__not-active">
+            <img src="./images/discovery.svg" alt="">
+            <span>资讯</span>
+        </div>
+    </footer>
+    <!-- 轮播图插件 -->
+    <!-- get movie data -->
+    <script src="/Movie_Pie/scripts/movie.js"></script>
+    <script src="/Movie_Pie/scripts/app.js"></script>
+    <!-- 3.x -->
+    <!-- <script src="/Movie_Pie/scripts/swiper.min.js"> </script> -->
+
+    <!-- 7.x -->
+    <script src="/Movie_Pie/scripts/swiper-bundle.min.js"> </script>
+    <script src="/Movie_Pie/scripts/swiper-init.js"> </script>
+
+</body>
+
+</html>
