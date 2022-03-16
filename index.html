@@ -29,6 +29,7 @@
         </nav>
     </header>
     <main class="container">
+        <!-- banners -->
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-1.jpg" alt=""></div>
@@ -41,9 +42,19 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
-        <section class="now-showing">
-            <div class="now-showing__title">
-                <h2 class="now-showing__title">近期热映</h2>
+        <!-- today's top 10 -->
+        <section class="container">
+            <div class="section__title">
+                <h2>Today's top 10</h2>
+            </div>
+            <div class="bg-dark"></div>
+
+            </div>
+        </section>
+        <!-- now-showing -->
+        <section class="container now-showing">
+            <div class="section__title">
+                <h2>Now showing</h2>
                 <!-- <button class="tempBtn">Refresh</button> -->
                 <div class="divider"></div>
             </div>
@@ -75,7 +86,6 @@
                 </div> -->
             </div>
             <div class="load-more d-none">加载更多</div>
-            <div class="load-more no-more d-none">已经到底了哦...</div>
             <div class="loader d-none">
                 <div class="half-circle-spinner">
                     <div class="circle circle-1"></div>

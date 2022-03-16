@@ -17,15 +17,20 @@ const hideLoading = () => {
 const showLoadMore = () => {
     loadMore.classList.remove('d-none')
 }
-const hideLoadMore = () => {
+const hideLoadMore = (noMore) => {
     loadMore.classList.add('d-none')
+}
+
+const showNoMore = () => {
+    loadMore.classList.add('no-more');
+    loadMore.textContent = '已经到底了哦...'
 }
 
 let movieLists = []
 
 
 
-let { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
 
 // const handelScrolling = () => {
 
@@ -52,13 +57,16 @@ let { scrollTop, scrollHeight, clientHeight } = document.documentElement;
 // }
 
 const isBottom = () => {
+    let { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    // console.log(scrollTop + clientHeight, '', scrollHeight - 10);
+    // console.log(scrollTop + clientHeight > scrollHeight - 200);
+    // console.log(clientHeight, scrollTop, scrollHeight, nowShowingMovieList.childElementCount);
+    (nowShowingMovieList.childElementCount < movieLists.length) ?
+        showLoadMore() : showNoMore();
 
-    (clientHeight + scrollTop >= scrollHeight - 50 && nowShowingMovieList.childElementCount < movieLists.length) ?
-        showLoadMore() : noMore.classList.remove('d-none')
 }
 
 const handleLoadMore = () => {
-    hideLoadMore()
     if (nowShowingMovieList.childElementCount < movieLists.length) {
         console.log('loading more while scrolling');
         let start = nowShowingMovieList.childElementCount;
@@ -71,39 +79,8 @@ const handleLoadMore = () => {
 
 loadMore.addEventListener('click', handleLoadMore)
 
-
-// const handleScrolling = () => {
-//     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-//     if (clientHeight + scrollTop >= scrollHeight - 50) {
-//         isBottom = true;
-//         console.log('to bottom')
-//     }
-
 window.addEventListener('scroll', isBottom)
 // }
-
-
-// let scroll = 0;
-// const scrollingAndUpdata = () => {
-//     handleScrolling()
-//     if (nowShowingMovieList.childElementCount) {
-//         // console.log('nowShowingMovieList.childElementCount');
-
-//         const moviedata = updateMovieList().then((data) => {
-//             if (data) {
-//                 const dataLength = data.films.length;
-//                 // console.log('moviedata', dataLength);
-
-
-//                 console.log('next data');
-//             }
-//         })
-
-//     }
-
-// }
-
-
 
 
 
@@ -155,11 +132,12 @@ const updateMovieListUI = async (start, end) => {
             </div>
     `
         nowShowingMovieList.innerHTML += html
+        let { clientHeight } = document.documentElement;
         // console.log('scrollTop:', scrollTop, 'clientHeight: ', clientHeight, 'top+client: ', scrollTop + clientHeight, 'scrollHeight: ', scrollHeight,);
         if (nowShowingMovieList.childElementCount > 5) {
             document.documentElement.scrollBy(0, clientHeight / 3)
-            hideLoadMore()
         }
+
     });
 }
 

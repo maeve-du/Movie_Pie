@@ -11,7 +11,7 @@
 html {
     font-size: 62.5%; 
     min-height: 100%;
-    position: relative;
+    /* position: relative; */
 }
 
 body {
@@ -121,8 +121,15 @@ img {
 }
 
 .container {
+    position: relative;
     max-width: 37.5rem !important;
     margin: 0 auto;
+}
+
+
+.red-bg {
+     background-color: red;
+     height: 200px;
 }
 
 .divider {
@@ -182,18 +189,38 @@ color: #FE6E9A;
 /* main sections */
 
 
-
+/* top 10 */
+.bg-dark {
+    background-color: #04041F;
+    height: 147px;
+}
 
 /* now showing 近期热映 */
 .now-showing {
-    width: fit-content;
-    margin: 0 auto;
-    margin-bottom: 100px;
+    /* width: fit-content; */
+    /* left: 0;
+    right: 0;
+    margin: 0 auto; */
+    margin-bottom: 120px;
+   
+}
+.movie-list__now-showing {
+
 }
 
-.now-showing__title {
+.section__title{
     /* font-family: 'Fredoka One', sans-serif;  */
-    color: rgba(255, 255, 255, 0.6)
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+
+.movie-list__now-showing {
+    width: fit-content;
+    margin: 0 auto;
 }
 
 /* single card */
