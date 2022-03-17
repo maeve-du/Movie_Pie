@@ -400,9 +400,9 @@ body > main > section:nth-child(2) > div.bg-dark > div > div:nth-child(3) .ranki
     flex-direction: row;
     align-items: center;
     justify-content:left;
-    gap: 4px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    gap: 2px;
+    margin-top: 4px;
+    margin-bottom: 2px;
     }
 
     .card__details-rate img {
@@ -413,7 +413,7 @@ body > main > section:nth-child(2) > div.bg-dark > div > div:nth-child(3) .ranki
     .card__details-rate p { 
         font-family: 'Fredoka One', sans-serif; 
         font-size: 1.4rem;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         color: #FDC83F;
 
     }
@@ -422,6 +422,13 @@ body > main > section:nth-child(2) > div.bg-dark > div > div:nth-child(3) .ranki
         font-size: 1rem;
         color: rgba(255, 255, 255, 0.6);
         display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-bottom: 0.5px;
+    }
+    .card__top h2 {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
     }
 
     .card__details-bottom {

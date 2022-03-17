@@ -84,17 +84,45 @@ const getMovie = async (movieIds) => {
     return data
 }
 
-getMovie()
+// getMovie()
 
-getTop10Poster()
+// getTop10Poster()
 
 
+const getMovieDetails = async (id) => {
+    const config = {
+        method: 'GET',
+        headers: {
+            'X-Host': 'mall.film-ticket.film.info',
+            'X-Client-Info': '{"a":"3000","ch":"1002","v":"5.2.0","e":"16447321645344640123273217","bc":"440300"}'
 
-// const getTop10 = async () => {
-//     const baseUrl = 'http://localhost:3000/data';
-//     const res = await fetch(baseUrl);
-//     const top10data = res.json();
-//     console.log(top10data);
-//     return top10data;
+        }
+    }
+    const baseUrl = 'https://m.maizuo.com/gateway?k=7849534&';
+    const movieId = `filmId=${id}`
+    const res = await fetch(baseUrl + movieId, config);
+    const movieDetailData = await res.json()
+    const data = await movieDetailData.data.film
+    return data
+}
 
-// }
+
+// details
+// actors: (5) [{…}, {…}, {…}, {…}, {…}]
+// category: "剧情|爱情"
+// director: "张善南"
+// filmId: 5900
+// filmType: {name: '2D', value: 1}
+// isPresale: false
+// isSale: true
+// item: {name: '2D', type: 1}
+// language: ""
+// name: "年少有你"
+// nation: "中国大陆"
+// photos: (5) ['https://pic.maizuo.com/usr/2022/3e9f8791cda0330e679db825cf61098e.jpg', 'https://pic.maizuo.com/usr/2022/5742f5413f771c4c846a080957453bb7.jpg', 'https://pic.maizuo.com/usr/2022/67e8fc859bf8aa8fa0c18d629b7cea11.jpg', 'https://pic.maizuo.com/usr/2022/9fdd67a790208dccd420c13268665795.jpg', 'https://pic.maizuo.com/usr/2022/f1c93a3f75d61314d6ba91bfcbd9880f.jpg']
+// poster: "https://pic.maizuo.com/usr/movie/f384093d780553b993184f782526962c.jpg"
+// premiereAt: 1647561600
+// runtime: 96
+// synopsis: "墨彩宁（张善南 饰）是一名普通的高中学生，因为班主任（王天宇 饰）就是自家小姨，所以自己的一举一动都逃不过小姨的法眼，平日只好伪装成乖乖学生，但本质上却是一个不折不扣的追星达人。转校生顾天琦（李明源 饰）的到来让她本来平静的生活发生了巨大转变，她发现这位引人注目的同桌竟是偶像顾云凡（区天瑞 饰）的亲弟弟，在顾天琦的嘱咐下，墨彩宁答应保守住这个秘密。可特殊身份的消息还是不胫而走，也因此与闺蜜张公主（郭素洁 饰）产生了误会，为了能让张公主不再难过、顾天琦不再转学，墨彩宁与同学袁迟（范云飞 饰）、同学童辉（李炎峰 饰）等人团结一心解决了困扰。在相处中，墨彩宁决心要成为像顾天琦一样优秀的人。转眼到了寒假，在盛大的烟花下大家树立了各自的人生目标，带着珍贵的友谊走向憧憬的未来……"
+// timeType: 3
+// videoId: ""

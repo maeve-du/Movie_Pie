@@ -108,6 +108,7 @@ object-fit: cover;
 .movie__details__content {
     padding-left: 2rem;
     padding-right: 2rem; 
+    margin-bottom: 100px;
 }
 
 .movie__details__content .divider{
@@ -128,7 +129,7 @@ object-fit: cover;
     letter-spacing: 1.2px;
     position: relative;
     z-index: 10;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     margin-top: 20px;
 }
 .movie__details__content-text h2::before {
@@ -148,8 +149,13 @@ object-fit: cover;
     display: flex;
     overflow: auto;
    gap:2rem;
-   margin-bottom: 60px;
+   margin-bottom: 40px;
 }
+
+.movie__actors-group::-webkit-scrollbar {
+    height: 0rem;
+
+  }
 .movie__actor {
     display: flex;
     flex-direction: column;
