@@ -1,12 +1,19 @@
 # Movie_Pie
 
-# Next
-1. todays top 10  👈
-2. user registration
-3. news （tab swap）
-4. show movie theaters
+## Next :
+1. ~~todays top 10~~
+2. movie details 👈
+3. user registration 
+4. news （tab swap）
+5. show movie theaters
  
-## v0.4.0
+
+## Updates :
+
+### v0.4.5 
+1. today's top 10 ✅
+
+### v0.4.0 (github typo branch name: v0.0.4)
 
 1. header ✅
     1. logo
@@ -18,6 +25,5 @@
 4. now showing ✅
     1. display now showing movies
     2. 5 movie when loaded, 5 move when click the `load more` button
-
 
 
