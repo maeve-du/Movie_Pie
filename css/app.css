@@ -24,10 +24,11 @@ body {
     width: 100%;
     overflow: auto;
     text-decoration: none;
-    margin-top: 84px;
 }
 
-
+main {
+    margin-top: 84px;
+}
 
 .d-none {
     display: none;
@@ -165,8 +166,8 @@ nav {
     align-items: center;
     padding: 12px 2rem;
     font-family: 'Fredoka One', sans-serif; 
-    /* background-color: #1F1F2B; */
-    background: rgba(49, 49, 61, 0.6);
+    background-color: #1F1F2B;
+    /* background: rgba(49, 49, 61, 0.6); */
     backdrop-filter: blur(20px);
     position: fixed;
     width: 100%;
@@ -503,7 +504,14 @@ body > main > section:nth-child(2) > div.bg-dark > div > div:nth-child(3) .ranki
     .card__details {
         padding: 24px 0;
     }
-    body {
+    main {
         margin-top: 108px;
     }
 }
+
+/* @media screen and (max-width: 350px) {
+    html {
+        font-size: 60%; 
+    }
+    
+} */

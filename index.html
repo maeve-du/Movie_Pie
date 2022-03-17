@@ -12,126 +12,236 @@
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <!-- swiper自定义样式 -->
     <link rel="stylesheet" href="./css/swiper-extra.css">
-    <link rel="stylesheet" href="./css/app.css">
     <link rel="stylesheet" href="./css/movie-details-modal.css">
+    <link rel="stylesheet" href="./css/app.css">
     <title>Movie Pie</title>
 </head>
 
 <body>
-    <section class="movie__details_modal">
-
-    </section>
-    <header class="">
-        <nav>
-            <div class="logo">
-                <img src="./images/play.png" alt="" class="logo-img">
-                <h1 class="logo-text">Movie Pie</h1>
-            </div>
-            <div class="nav">
-                <img src="./images/user-avatar-default.svg" alt="">
-            </div>
-        </nav>
-    </header>
-    <main>
-        <!-- banners -->
-        <div class="swiper mySwiper container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-1.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-2.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-3.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-1.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-2.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-3.jpg" alt=""></div>
-
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-        <!-- today's top 10 -->
-        <section class="">
-            <div class="section__title container">
-                <div class="title-row">
-                    <h2>Today's top 10</h2>
-                    <p>更新时间: <span class="boxoffic-date">0000-00-00</span></p>
-                </div>
-
-
-
-            </div>
-            <div class="bg-dark">
-                <div class="movies-row">
-                    <div class="movies">
-
-                        <!-- <div class="movie-col">
-                            <span class="ranking">1</span>
-                            <span class="box-office-total">44万</span>
-                            <div class="movie-col-img">
-                                <img src="/Movie_Pie/images/poster-spiderman.jpg" alt="">
-                            </div>
-                            <span class="col_title">蜘蛛侠: 英雄远征</span>
-                        </div> -->
+    <section class="modal d-none">
+        <div class="movie__details_modal">
+            <header class="modual-header">
+                <nav>
+                    <div class="logo">
+                        <img src="./images/play.png" alt="" class="logo-img">
                     </div>
-
-
-
+                    <div movie__details-page-title>Movie Details</div>
+                    <div class="close-modal">
+                        <img src="./images/icons/icon-close.svg" alt="">
+                    </div>
+                </nav>
+            </header>
+            <section class="movie__details-header">
+                <div class="movie__details-poster"><img src="./images/poster-spiderman.jpg" alt=""></div>
+                <div class="movie__details-info info-1">
+                    <img src="./images/icons/icon-video-pink.svg" alt="">
+                    <div class="movie__details-infor-text">
+                        <span>Genre</span>
+                        <p>喜剧喜剧喜剧</p>
+                    </div>
                 </div>
-            </div>
+                <div class="movie__details-info info-2">
+                    <img src="./images/icons/icon-time-pink.svg" alt="">
+                    <div class="movie__details-infor-text">
+                        <span>Duration</span>
+                        <p>116分钟</p>
+                    </div>
+                </div>
+                <div class="movie__details-info info-3">
+                    <img src="./images/icons/icon-star-pink.svg" alt="">
+                    <div class="movie__details-infor-text">
+                        <span>Rating</span>
+                        <p>8.7 / 10</p>
+                    </div>
+                </div>
 
-            </div>
-        </section>
-        <!-- now-showing -->
-        <section class="container now-showing">
-            <div class="section__title">
-                <h2>Now showing</h2>
-                <!-- <button class="tempBtn">Refresh</button> -->
+            </section>
+            <section class="movie__details__content">
+                <div class="movie__details__content-title">
+                    <h1>蜘蛛侠：英雄无归</h1>
+                    <p>上映时间: <span>2022/3/22</span></p>
+                    <p>导演: <span>鲁本·弗雷斯彻</span></p>
+                </div>
                 <div class="divider"></div>
-            </div>
-
-            <div class="movie-list__now-showing">
-                <!-- 1 -->
-                <!-- <div class="now-showing_card">
-                    <div class="now-showing_poster"><img src="./images//poster-spiderman.jpg"></div>
-                    <div class="card__details">
-                        <div class="card__top">
-                            <h2>蜘蛛侠: 英雄无归</h2>
-                            <div class="card__details-rate">
-                                <img src="./images/star.svg" alt="">
-                                <p>8.8</p>
+                <div class="movie__details__content-text">
+                    <h2 class="title-before">Synopsis</h2>
+                    <p>
+                        足智多谋的内森·德雷克（汤姆·赫兰德 饰）和经验丰富的寻宝者维克多·苏利文（马克·沃尔伯格
+                        饰）组成搭档，追寻费迪南·麦哲伦500年前遗失的宝藏。一开始，这似乎只是个简单的寻宝工作，但很快演变成了一场惊险刺激、横跨全球的竞赛。他们必须赶在冷酷无情的蒙卡达（安东尼奥·班德拉斯
+                        饰）之前寻得宝藏。蒙卡达坚信他和他的家族才是宝藏的正当继承人。若内森和苏利文能破译线索，解开这世界上最古老的谜团，他们便能找到价值50亿美元的宝藏，甚至还可能找到内森失踪已久的哥哥…但首先，他们必须学会通力合作。
+                    </p>
+                </div>
+                <div class="movie__details__content-text">
+                    <h2 class="title-before">Starring</h2>
+                    <div class="movie__actors-group">
+                        <div class="movie__actor">
+                            <div class="movie__actors-img">
+                                <img src="./images/avatars/avatar-1.jpeg" alt="">
                             </div>
-                            <span>上映时间: 2020年3月2日</span>
+                            <h6>汤姆·赫兰德</h6>
                         </div>
-                        <div class="card__details-bottom">
-                            <div>
-                                <span class="movie-tag tag-important">3D</span>
+                        <div class="movie__actor">
+                            <div class="movie__actors-img">
+                                <img src="./images/avatars/avatar-2.jpeg" alt="">
                             </div>
-                            <div class="movie-tag-group">
-                                <span class="movie-tag">剧情</span>
-                                <span class="movie-tag">历史</span>
-                                <span class="movie-tag">战争</span>
+                            <h6>汤姆·赫兰德</h6>
+                        </div>
+                        <div class="movie__actor">
+                            <div class="movie__actors-img">
+                                <img src="./images/avatars/avatar-3.jpeg" alt="">
                             </div>
+                            <h6>汤姆·赫兰德</h6>
+                        </div>
+                        <div class="movie__actor">
+                            <div class="movie__actors-img">
+                                <img src="./images/avatars/avatar-4.jpeg" alt="">
+                            </div>
+                            <h6>汤姆·赫兰德</h6>
+                        </div>
+                        <div class="movie__actor">
+                            <div class="movie__actors-img">
+                                <img src="./images/avatars/avatar-1.jpeg" alt="">
+                            </div>
+                            <h6>汤姆·赫兰德</h6>
+                        </div>
+                        <div class="movie__actor">
+                            <div class="movie__actors-img">
+                                <img src="./images/avatars/avatar-1.jpeg" alt="">
+                            </div>
+                            <h6>汤姆·赫兰德</h6>
+                        </div>
+                        <div class="movie__actor">
+                            <div class="movie__actors-img">
+                                <img src="./images/avatars/avatar-1.jpeg" alt="">
+                            </div>
+                            <h6>汤姆·赫兰德</h6>
+                        </div>
+                        <div class="movie__actor">
+                            <div class="movie__actors-img">
+                                <img src="./images/avatars/avatar-1.jpeg" alt="">
+                            </div>
+                            <h6>汤姆·赫兰德</h6>
                         </div>
                     </div>
-                </div> -->
-            </div>
-            <div class="load-more d-none">加载更多</div>
-            <div class="loader d-none">
-                <div class="half-circle-spinner">
-                    <div class="circle circle-1"></div>
-                    <div class="circle circle-2"></div>
-                </div>
-            </div>
 
-        </section>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!-- <main class="d-none"> -->
+    <main>
+        <header class="">
+            <nav>
+                <div class="logo">
+                    <img src="./images/play.png" alt="" class="logo-img">
+                    <h1 class="logo-text">Movie Pie</h1>
+                </div>
+                <div class="nav">
+                    <img src="./images/user-avatar-default.svg" alt="">
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- banners -->
+            <div class="swiper mySwiper container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-3.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-3.jpg" alt=""></div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- today's top 10 -->
+            <section class="">
+                <div class="section__title container">
+                    <div class="title-row">
+                        <h2>Today's top 10</h2>
+                        <p>更新时间: <span class="boxoffic-date">0000-00-00</span></p>
+                    </div>
+
+
+
+                </div>
+                <div class="bg-dark">
+                    <div class="movies-row">
+                        <div class="movies">
+
+                            <!-- <div class="movie-col">
+                                <span class="ranking">1</span>
+                                <span class="box-office-total">44万</span>
+                                <div class="movie-col-img">
+                                    <img src="/Movie_Pie/images/poster-spiderman.jpg" alt="">
+                                </div>
+                                <span class="col_title">蜘蛛侠: 英雄远征</span>
+                            </div> -->
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                </div>
+            </section>
+            <!-- now-showing -->
+            <section class="container now-showing">
+                <div class="section__title">
+                    <h2>Now showing</h2>
+                    <!-- <button class="tempBtn">Refresh</button> -->
+                    <div class="divider"></div>
+                </div>
+
+                <div class="movie-list__now-showing">
+                    <!-- 1 -->
+                    <!-- <div class="now-showing_card">
+                        <div class="now-showing_poster"><img src="./images//poster-spiderman.jpg"></div>
+                        <div class="card__details">
+                            <div class="card__top">
+                                <h2>蜘蛛侠: 英雄无归</h2>
+                                <div class="card__details-rate">
+                                    <img src="./images/star.svg" alt="">
+                                    <p>8.8</p>
+                                </div>
+                                <span>上映时间: 2020年3月2日</span>
+                            </div>
+                            <div class="card__details-bottom">
+                                <div>
+                                    <span class="movie-tag tag-important">3D</span>
+                                </div>
+                                <div class="movie-tag-group">
+                                    <span class="movie-tag">剧情</span>
+                                    <span class="movie-tag">历史</span>
+                                    <span class="movie-tag">战争</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="load-more d-none">加载更多</div>
+                <div class="loader d-none">
+                    <div class="half-circle-spinner">
+                        <div class="circle circle-1"></div>
+                        <div class="circle circle-2"></div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        <footer class="container tabbar">
+            <div class="tabbar__col">
+                <img src="./images/home.svg" alt="">
+                <span>首页</span>
+            </div>
+            <div class="tabbar__col tabbar__not-active">
+                <img src="./images/discovery.svg" alt="">
+                <span>资讯</span>
+            </div>
+        </footer>
     </main>
-    <footer class="container tabbar">
-        <div class="tabbar__col">
-            <img src="./images/home.svg" alt="">
-            <span>首页</span>
-        </div>
-        <div class="tabbar__col tabbar__not-active">
-            <img src="./images/discovery.svg" alt="">
-            <span>资讯</span>
-        </div>
-    </footer>
     <!-- 轮播图插件 -->
     <!-- get movie data -->
     <script src="/Movie_Pie/scripts/movie.js"></script>

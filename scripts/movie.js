@@ -12,7 +12,7 @@
 const getTop10 = async () => {
     const date = new Date().toLocaleDateString('en-CA', { timeZone: "Asia/Shanghai" });
     // const url = 'https://movie.maipiaomao.com/getDayData?withSvcFee=true&dateType=0&date=2022-03-17'
-    const baseUrl = 'https://movie.maipiaomao.com/getDayData?withSvcFee=true&dateType=0&'
+    // const baseUrl = 'https://movie.maipiaomao.com/getDayData?withSvcFee=true&dateType=0&'
     const boxOfficDate = `date=${date}`
     console.log(baseUrl + date)
     const config = {
@@ -98,5 +98,3 @@ getTop10Poster()
 //     return top10data;
 
 // }
-
-
