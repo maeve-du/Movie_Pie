@@ -19,7 +19,8 @@ body {
     font-size: 1.6rem; 
     font-family: 'Noto Sans SC', sans-serif;
     color: rgba(255, 255, 255, 1);
-    background-color: #10101a;
+    /* background-color: #10101a; */
+    background-color: #1A1A22;
     width: 100%;
     overflow: auto;
     text-decoration: none;
@@ -118,11 +119,19 @@ h2 {
 
 img {
     max-width: 100%;
+    object-fit: cover;
 }
+
 
 .container {
     position: relative;
     max-width: 37.5rem !important;
+    margin: 0 auto;
+}
+
+.container-full {
+    position: relative;
+    max-width: 100% !important;
     margin: 0 auto;
 }
 
@@ -147,7 +156,6 @@ header {
   left: 0;
   height: 64px;
   margin-bottom: 20px;
- 
 }
 
 nav {
@@ -157,7 +165,9 @@ nav {
     align-items: center;
     padding: 12px 2rem;
     font-family: 'Fredoka One', sans-serif; 
-    background-color: #1F1F2B;
+    /* background-color: #1F1F2B; */
+    background: rgba(49, 49, 61, 0.6);
+    backdrop-filter: blur(20px);
     position: fixed;
     width: 100%;
     z-index: 100;;
@@ -191,25 +201,127 @@ color: #FE6E9A;
 
 /* top 10 */
 .bg-dark {
-    background-color: #04041F;
-    height: 147px;
+    background-color:  rgba(255, 255, 255, 0.08);
+    /* height: 14.7rem; */
+}
+
+.movies-row {
+    /* box-sizing: content-box; */
+    max-width: 33.5rem;
+    padding-block:  20px;
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+    overflow-x: auto;
+    scrollbar-base-color: #FF196E;
+    scrollbar-color: #fff;
+    scrollbar-gutter: rgb(130, 13, 176);
+
+}
+
+.movies-row::-webkit-scrollbar {
+    width: 0.2rem;
+    height: .2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+  }
+  
+.movies-row::-webkit-scrollbar-thumb {
+    background: rgba(254, 110, 154, 1);
+    border-radius: 1rem;
+  }
+
+.movie-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.movie-col span.col_title {
+    font-size: 1rem;
+}
+
+
+.movie-col-img {
+    width: 6.4rem;
+    height: 8.9rem;
+    /* border: 0.15rem #fff solid; */
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+
+}
+.movie-col-img img {
+    
+}
+/* .movie-col-img::before {
+    content: attr(data-before);
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: center;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: #FF196E;
+    border-radius: 0.2rem;
+    font-family: 'Fredoka One', sans-serif;   
+} */
+.movies {
+    position: relative;
+}
+.movies .ranking {
+    position: absolute;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: center;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5em;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: #EC90B2;
+    border-radius: 0.2rem;
+    font-family: 'Fredoka One', sans-serif;   
+}
+.movies .box-office-total {
+    position: absolute;
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    text-align: center;
+    position: absolute;
+    top: 7.7rem;
+    left: 0;
+    right:0;
+    margin: 0 auto;
+    width: 100%;
+    height: 1.4rem;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0.2rem;
+}
+
+body > main > section:nth-child(2) > div.bg-dark > div > div:nth-child(1) .ranking,
+body > main > section:nth-child(2) > div.bg-dark > div > div:nth-child(2) .ranking,
+body > main > section:nth-child(2) > div.bg-dark > div > div:nth-child(3) .ranking{
+    background-color: #FF196E;
 }
 
 /* now showing 近期热映 */
 .now-showing {
-    /* width: fit-content; */
-    /* left: 0;
-    right: 0;
-    margin: 0 auto; */
     margin-bottom: 120px;
    
 }
-.movie-list__now-showing {
 
+.section__title .title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
 .section__title{
-    /* font-family: 'Fredoka One', sans-serif;  */
+    font-family: 'Fredoka One', sans-serif; 
     padding-left: 2rem;
     padding-right: 2rem;
     color: rgba(255, 255, 255, 0.6);
@@ -217,6 +329,12 @@ color: #FE6E9A;
     margin-top: 30px;
 }
 
+
+.section__title p {
+    font-family: 'Noto Sans SC', sans-serif;
+    color: rgba(255, 255, 255, 0.3); 
+    font-size: 1.1rem;
+}
 
 .movie-list__now-showing {
     width: fit-content;
@@ -344,7 +462,8 @@ color: #FE6E9A;
     width: 100%;
     height: 68px;
     bottom: 0;
-    background: rgba(49, 49, 61, 0.9);
+    background: rgba(49, 49, 61, 0.6);
+    backdrop-filter: blur(20px);
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -371,6 +490,8 @@ color: #FE6E9A;
     opacity: 0.6;
     transform: scale(0.9)
 }
+
+
 
 @media screen and (min-width: 720px) {
     html {

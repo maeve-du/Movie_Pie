@@ -13,10 +13,14 @@
     <!-- swiper自定义样式 -->
     <link rel="stylesheet" href="./css/swiper-extra.css">
     <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/movie-details-modal.css">
     <title>Movie Pie</title>
 </head>
 
 <body>
+    <section class="movie__details_modal">
+
+    </section>
     <header class="">
         <nav>
             <div class="logo">
@@ -28,9 +32,9 @@
             </div>
         </nav>
     </header>
-    <main class="container">
+    <main>
         <!-- banners -->
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-1.jpg" alt=""></div>
                 <div class="swiper-slide"><img src="/Movie_Pie/images/banners/banner-2.jpg" alt=""></div>
@@ -43,11 +47,34 @@
             <div class="swiper-pagination"></div>
         </div>
         <!-- today's top 10 -->
-        <section class="container">
-            <div class="section__title">
-                <h2>Today's top 10</h2>
+        <section class="">
+            <div class="section__title container">
+                <div class="title-row">
+                    <h2>Today's top 10</h2>
+                    <p>更新时间: <span class="boxoffic-date">0000-00-00</span></p>
+                </div>
+
+
+
             </div>
-            <div class="bg-dark"></div>
+            <div class="bg-dark">
+                <div class="movies-row">
+                    <div class="movies">
+
+                        <!-- <div class="movie-col">
+                            <span class="ranking">1</span>
+                            <span class="box-office-total">44万</span>
+                            <div class="movie-col-img">
+                                <img src="/Movie_Pie/images/poster-spiderman.jpg" alt="">
+                            </div>
+                            <span class="col_title">蜘蛛侠: 英雄远征</span>
+                        </div> -->
+                    </div>
+
+
+
+                </div>
+            </div>
 
             </div>
         </section>

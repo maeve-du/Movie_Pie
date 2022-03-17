@@ -5,6 +5,9 @@ const body = document.querySelector('body')
 const loader = document.querySelector('.loader');
 const loadMore = document.querySelector('.load-more');
 const noMore = document.querySelector('.no-more');
+const movieTop10Row = document.querySelector('.movies-row')
+// const movieTop10Ranking = document.querySelector('.movies.ranking')
+const today = document.querySelector('span.boxoffic-date')
 
 const showLoading = () => {
     loader.classList.remove('d-none')
@@ -88,7 +91,7 @@ window.addEventListener('scroll', isBottom)
 const updateMovieListUI = async (start, end) => {
     const moviedata = await updateMovieList();
     hideLoading()
-    movieLists = moviedata.films;
+    movieLists = moviedata;
     const getNextMovies = movieLists.slice(start, end)
     const rateNull = `<p style="font-family: 'Noto Sans SC', sans-serif; font-size: 1rem; font-weight:500; line-height: 1rem">暂无评分</p>`
     getNextMovies.forEach((movie) => {
@@ -147,17 +150,61 @@ const handelMovieListUI = (start, end) => {
     updateMovieListUI(start, end)
 }
 
+
 // 1. get api's data
 const updateMovieList = async () => {
     data = await getMovie();
     return data
 }
 
+
+const updateTop10UI = async () => {
+    const { top10Movies, poster } = await updateTop10();
+    console.log(top10Movies, poster);
+    html = ``;
+
+    top10Movies.forEach((movie, index) => {
+        html = `
+            <div class="movies">
+                <span class="ranking">${index + 1}</span>
+                <span class="box-office-total">${movie.salesInWanDesc + "万"}</span>
+                <div class="movie-col">
+                    <div class="movie-col-img">
+                        <img src="${poster[index]}" alt="">
+                    </div>
+                    <span class="col_title">${movie.name && movie.name.slice(0, 5) + '...'}</span>
+                </div>
+            </div>
+    `
+        movieTop10Row.innerHTML += html
+    });
+    const date = new Date().toLocaleDateString('en-CA', { timeZone: "Asia/Shanghai" });
+    today.textContent = date
+}
+
+
+const updateTop10 = async () => {
+    top10Movies = await getTop10();
+    poster = await getTop10Poster();
+
+    return { top10Movies, poster }
+}
+
+
+const whenLoaded = () => {
+    handelMovieListUI(0, 5);
+    updateTop10UI()
+}
+
 // 4. load the data when 
 if (!nowShowingMovieList.childElementCount) {
     console.log('loaded')
-    body.addEventListener('load', handelMovieListUI(0, 5))
+    body.addEventListener('load', whenLoaded())
 }
+
+// get top 10
+
+
 
 
 
