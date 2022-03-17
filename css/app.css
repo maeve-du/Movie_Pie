@@ -273,6 +273,12 @@ color: #FE6E9A;
 .movies {
     position: relative;
 }
+
+#top10rank > div:nth-child(2) .movies.ranking{
+    background-color: #FF196E;
+    color: aqua;
+}
+
 .movies .ranking {
     position: absolute;
     font-size: 1.2rem;
@@ -284,6 +290,7 @@ color: #FE6E9A;
     width: 1.4rem;
     height: 1.4rem;
     background-color: #EC90B2;
+    background-color: #FF196E;
     border-radius: 0.2rem;
     font-family: 'Fredoka One', sans-serif;   
 }
@@ -303,12 +310,7 @@ color: #FE6E9A;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 0.2rem;
 }
-
-body > main > section:nth-child(2) > div.bg-dark > div > div:nth-child(1) .ranking,
-body > main > section:nth-child(2) > div.bg-dark > div > div:nth-child(2) .ranking,
-body > main > section:nth-child(2) > div.bg-dark > div > div:nth-child(3) .ranking{
-    background-color: #FF196E;
-}
+/* #main-page > main > section:nth-child(2) > div.bg-dark > div > div:nth-child(2) > span.ranking */
 
 /* now showing 近期热映 */
 .now-showing {

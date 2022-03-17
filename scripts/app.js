@@ -12,8 +12,10 @@ const movieCardList = document.querySelector('.movie-list__now-showing');
 const mainPage = document.querySelector('#main-page')
 const DetailsPage = document.querySelector('section.modal')
 
+// const closeModal = document.querySelector('.close-modal img')
+
 // test DOM
-console.log('DOM', movieCardList);
+// console.log('DOM', closeModal);
 
 const showDetail = () => {
     let { scrollTop } = document.documentElement;
@@ -29,6 +31,7 @@ const hideDetail = () => {
     mainPage.classList.remove('d-none');
     DetailsPage.classList.add('d-none');
 }
+
 
 const showLoading = () => {
     loader.classList.remove('d-none');
@@ -166,7 +169,7 @@ const updateMovieList = async () => {
 
 const updateTop10UI = async () => {
     const { top10Movies, poster } = await updateTop10();
-    console.log(top10Movies, poster);
+    // console.log(top10Movies, poster);
     html = ``;
 
     top10Movies.forEach((movie, index) => {
@@ -215,17 +218,20 @@ const updateMovieDetailslUI = (data) => {
     // console.log(movie)
     const movie = data;
     let actorsHtml = ``;
-    movie.actors.forEach(actor => {
-        actorHtml = `
-        <div class="movie__actor">
-            <div class="movie__actors-img">
-                <img src="${actor.avatarAddress}" alt="">
-            </div>
-            <h6>${actor.name}</h6>
-         </div>
-        `
-        actorsHtml += actorHtml
-    });
+    if (movie.actors) {
+        movie.actors.forEach(actor => {
+            actorHtml = `
+            <div class="movie__actor">
+                <div class="movie__actors-img">
+                    <img src="${actor.avatarAddress}" alt="">
+                </div>
+                <h6>${actor.name}</h6>
+             </div>
+            `
+            actorsHtml += actorHtml
+        });
+    }
+
 
     const html = `
         <div class="movie__details_modal">
@@ -234,8 +240,8 @@ const updateMovieDetailslUI = (data) => {
                     <div class="logo">
                         <img src="./images/play.png" alt="" class="logo-img">
                     </div>
-                    <div movie__details-page-title>Movie Details</div>
-                    <div class="close-modal">
+                    <div class="movie__details-page-titl">Movie Details</div>
+                    <div id="close-modal">
                         <img src="./images/icons/icon-close.svg" alt="">
                     </div>
                 </nav>
@@ -281,7 +287,7 @@ const updateMovieDetailslUI = (data) => {
                 <div class="movie__details__content-text">
                     <h2 class="title-before">Starring</h2>
                     <div class="movie__actors-group">
-                       ${actorsHtml}
+                       ${actorsHtml && actorsHtml}
                     </div>
 
                 </div>
@@ -289,7 +295,13 @@ const updateMovieDetailslUI = (data) => {
         </div>
     `;
     showDetail()
-    DetailsPage.innerHTML = html
+    DetailsPage.innerHTML = html;
+    const closeModal = document.querySelector('#close-modal');
+    console.log('DOM', closeModal);
+    closeModal.addEventListener('click', (e) => {
+        console.log('clicklll', e);
+        hideDetail()
+    })
 
 }
 

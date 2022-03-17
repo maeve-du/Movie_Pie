@@ -2,16 +2,21 @@
 
 ## Next :
 1. ~~todays top 10~~
-2. movie details 👈
+2. ~~movie details~~ 
 3. user registration 
-4. news （tab swap）
+4. news （tab swap）👈
 5. show movie theaters
  
 
+## remaining bugs/issue:
+1. when open a new detail page, can't automactilly stick to top ( temp surlution: set the page auto scrll to top)
+
 ## Updates :
+
 
 ### v0.4.5 
 1. today's top 10 ✅
+2. movie details ✅
 
 ### v0.4.0 (github typo branch name: v0.0.4)
 
