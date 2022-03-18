@@ -162,12 +162,17 @@ object-fit: cover;
     justify-content: center;
     align-items: center;
 }
+.movie__actor h6 {
+    font-weight: 400;
+    font-size: 1rem;
+}
 
 .movie__actors-img {
     width: 8rem;
     height: 8rem;
     border-radius: 10rem;
     overflow: hidden;
+    margin-bottom: 0.4rem;
 }
 .movie__actors-group img {
     width: 100%;

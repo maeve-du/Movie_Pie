@@ -220,7 +220,7 @@ const updateMovieDetailslUI = (data) => {
     let actorsHtml = ``;
     if (movie.actors) {
         movie.actors.forEach(actor => {
-            actorHtml = `
+            const actorHtml = `
             <div class="movie__actor">
                 <div class="movie__actors-img">
                     <img src="${actor.avatarAddress}" alt="">
