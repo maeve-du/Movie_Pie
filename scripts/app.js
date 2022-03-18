@@ -68,10 +68,10 @@ const isBottom = () => {
 
 const handleLoadMore = () => {
     if (nowShowingMovieList.childElementCount < movieLists.length) {
-        console.log('loading more while scrolling');
+        // console.log('loading more while scrolling');
         let start = nowShowingMovieList.childElementCount;
         let end = start + 5;
-        console.log('scroll loaded');
+        // console.log('scroll loaded');
         handelMovieListUI(start, end);
     }
 
@@ -297,9 +297,7 @@ const updateMovieDetailslUI = (data) => {
     showDetail()
     DetailsPage.innerHTML = html;
     const closeModal = document.querySelector('#close-modal');
-    console.log('DOM', closeModal);
     closeModal.addEventListener('click', (e) => {
-        console.log('clicklll', e);
         hideDetail()
     })
 
